@@ -1,6 +1,13 @@
 (function(window, _) {
     window.gamington = window.gamington || {
-      numz: {},
+      numz: {
+        getDistance(pointA, pointB) {
+        const distanceX = pointB.x - pointA.x;
+        const distanceY = pointB.y - pointA.y;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        return distance;
+},
+      },
       phyz: {
         /**
          * Returns an Object with basic properties utilized in a 
